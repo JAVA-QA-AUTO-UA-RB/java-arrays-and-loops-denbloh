@@ -7,10 +7,10 @@ public class CastleAdventure {
         System.out.println("Welcome into the 'Castle Adventure' journey!");
         System.out.println("Your first task is to enter the castle. To open the door you need to enter correct password!");
         System.out.println("Do you need a hint for password answer? Type 1 for 'yes' or 2 for 'no'");
-        Scanner denscanner = new Scanner(System.in);
+        Scanner denScanner = new Scanner(System.in);
 
-
-        int choice1 = denscanner.nextInt();
+        
+        int choice1 = denScanner.nextInt();
         if (choice1 == 1) {
             System.out.println("1: How many oceans do we have?");
             System.out.println("2: Favorite t-shirt number of Cristiano Ronaldo");
@@ -32,7 +32,7 @@ public class CastleAdventure {
             isCodeCorrect = true;
 
             for (int i = 0; i < secretCode.length; i++) {
-                int userInput = denscanner.nextInt();
+                int userInput = denScanner.nextInt();
                 if (userInput != secretCode[i]) {
                     isCodeCorrect = false;
                 }
@@ -48,7 +48,7 @@ public class CastleAdventure {
                 System.out.println("2 - Get hint");
                 System.out.println("3 - Finish the game");
 
-                int choice2 = denscanner.nextInt();
+                int choice2 = denScanner.nextInt();
 
                 if (choice2 == 2) {
                     System.out.println("Hint:");
@@ -78,7 +78,7 @@ public class CastleAdventure {
         int playerSum;
         do {
             System.out.println("Type the sum of all numbers:");
-            playerSum = denscanner.nextInt();
+            playerSum = denScanner.nextInt();
 
             if (playerSum != numbersSum) {
                 System.out.println("Incorrect. Try again!");
@@ -110,7 +110,7 @@ public class CastleAdventure {
         System.out.println("5 - All attacks are the same");
 
         System.out.print("Select correct option (1-5): \n");
-        int choice3 = denscanner.nextInt();
+        int choice3 = denScanner.nextInt();
 
         if (choice3 == 3) {
             System.out.println("Correct! All attacks are even! Shield activated!");
@@ -134,7 +134,7 @@ public class CastleAdventure {
 
         do {
             System.out.print("Type your favorite number: ");
-            int favoriteNumber = denscanner.nextInt();
+            int favoriteNumber = denScanner.nextInt();
 
             for (int userFavNum : secretCode) {
                 if (userFavNum == favoriteNumber) {
@@ -166,7 +166,7 @@ public class CastleAdventure {
         } while (!isKeyFound);
 
         System.out.println("You found the magic key! You are true mag! See you soon in next adventures!");
-        denscanner.close();
+        denScanner.close();
         System.exit(0);
     }
 }
